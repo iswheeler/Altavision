@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>Altavision</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="plastic.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img class="overlay_window" src="assets/window.png">
+
+        <img class="overlay_startmenu" src="assets/sample-startmenu.png">
+
+        <div class="overlay_update">
+            <div class="overlay_update_inside">
+                <img src="assets/liquid_plastic/transition.png">
+                <p>Updating your PC...</p>
+                <progress class="progress" max="100" value="70">70%</progress>
+                <span class="skipbutton">Skip</span>
+            </div>
+
+            <div class="overlay_update_inside_bsod">
+                <h3>:(</h3>
+                <p>Your PC upgrade ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</p>
+            </div>
+
+        </div>
+
+        <div class="wrapper wrapper_98">
+        <!-- <div class="wrapper wrapper_plastic"> -->
+
+            <!-- <div class="window_frame">
+            <div class="titlebar">
+                <span class="title">Online Services</span>
+                <span class="window_frame_button"><img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAIAAACAMfp5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuNSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjYtMDQtMzBUMTI6NDU6MTQtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjYtMDQtMzBUMTI6NDU6MTQtMDQ6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI2LTA0LTMwVDEyOjQ1OjE0LTA0OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBlYzAzZmUzLWQxZDQtNDQ4Ni04ZTFmLWY3Yjc0MzhkYmE5MCIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjliOTk2ZGVhLWE0ZWQtM2M0My1hYTAzLTkwNjQwODBlMGI4MCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjFiNjcxYzkwLTEwMWUtNGIwOC1iMjlhLThiZjgwMWExYjliMiIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjFiNjcxYzkwLTEwMWUtNGIwOC1iMjlhLThiZjgwMWExYjliMiIgc3RFdnQ6d2hlbj0iMjAyNi0wNC0zMFQxMjo0NToxNC0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIzLjUgKE1hY2ludG9zaCkiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjBlYzAzZmUzLWQxZDQtNDQ4Ni04ZTFmLWY3Yjc0MzhkYmE5MCIgc3RFdnQ6d2hlbj0iMjAyNi0wNC0zMFQxMjo0NToxNC0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIzLjUgKE1hY2ludG9zaCkiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+zdIhpAAAABxJREFUCJljPHD8BAM2wIRVdKAlGDGFIB7AqQMAULkEr9QZt8MAAAAASUVORK5CYII="></span>
+                <span class="window_frame_button"><img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAIAAABv85FHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuMWI2NWE3OWI0LCAyMDIyLzA2LzEzLTIyOjAxOjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjMuNSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjYtMDQtMzBUMTI6NDQ6NTEtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjYtMDQtMzBUMTI6NDQ6NTEtMDQ6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDI2LTA0LTMwVDEyOjQ0OjUxLTA0OjAwIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBmNjAxYjViLWI4M2ItNDZmNC05ZTY1LTI5Mzk4N2YyZjE2MyIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjI4Yjk3ODBiLTUzZWMtNzg0NC05Y2RhLTM0OWZkZWMzYzRmOCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRhMDA0MWJkLTlhNmItNDVkNS05ZDMzLTcxMWMyNDVhMjI1ZCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjRhMDA0MWJkLTlhNmItNDVkNS05ZDMzLTcxMWMyNDVhMjI1ZCIgc3RFdnQ6d2hlbj0iMjAyNi0wNC0zMFQxMjo0NDo1MS0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIzLjUgKE1hY2ludG9zaCkiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjBmNjAxYjViLWI4M2ItNDZmNC05ZTY1LTI5Mzk4N2YyZjE2MyIgc3RFdnQ6d2hlbj0iMjAyNi0wNC0zMFQxMjo0NDo1MS0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIzLjUgKE1hY2ludG9zaCkiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+uQ2aTAAAAB9JREFUCJljYCAPMDIwMBw4fgJTwsHSggmPPnrL4QMANLkDDILJXzsAAAAASUVORK5CYII="></span>
+                <span class="window_frame_button close"><img draggable="false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAIAAAC6O5sJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANUlEQVQImWNkYGBgYGA4cPwEAww4WFqgCB04fgKZzQjhQFUh6WZCMwrOYEIxF1krTjtwuQoAtNkjz11J5wAAAAAASUVORK5CYII="></span>
+            </div>
+            <div class="content">
+                Hello, this is some window content
+            </div>
+        </div> -->
+
+            <div class="startmenu hidden">
+                <span class="stripe">
+                    <b>Altavision</b><span>Projects</span>
+                </span>
+                <div class="menuitem aboutme"><img class="icon" src="assets/aboutme.png" draggable="false">About Me</div>
+                <div class="menuitem github"><img class="icon" src="assets/github.png" draggable="false">GitHub</div>
+                <div class="menuitem linkedin"><img class="icon" src="assets/linkedin.png" draggable="false">LinkedIn</div>
+                <span class="divider"></span>
+                <div class="menuitem maizebus"><img class="icon" src="assets/maizebus.png" draggable="false">Maizebus</div>
+                <div class="menuitem pnrgateway"><img class="icon" src="assets/pnrgateway.png" draggable="false">PNRGateway</div>
+                <!--<div class="menuitem"><img class="icon" src="assets/mmmdining.png" draggable="false">MMMDining</div>-->
+                <!--<div class="menuitem">Name 1</div>
+                <div class="menuitem">Name 1</div>
+                <div class="menuitem">Name 1</div>
+                <div class="menuitem">Name 1</div>-->
+                <span class="divider"></span>
+                <!--<div class="menuitem">Name 1</div>-->
+                <div class="menuitem update"><img class="icon" src="assets/update_icon.png" draggable="false">Updates Available</div>
+
+            </div>
+
+            <div class="taskbar">
+                <span class="button" id="startButton">Begin</span>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>

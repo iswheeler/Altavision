@@ -1,0 +1,308 @@
+html,
+
+.wrapper_plastic {
+    background-image: url("assets/liquid_plastic/background.jpg");
+    background-size: cover;
+    background-position: top;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+}
+
+.wrapper_plastic::before {
+    content: ".";
+    color: transparent;
+    display: block;
+    position: fixed;
+    top: calc(50vh - 10rem);
+    left: 5rem;
+    background-image: url("assets/liquid_plastic/logo.png");
+    background-repeat: no-repeat;
+    width: 100rem;
+    height: 20rem;
+    background-size: contain;
+}
+
+.wrapper_plastic .taskbar {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background: linear-gradient(0deg, #ffffff82, #ffffff47);
+    /* padding: 0.5em 0.2em; */
+    height: 3rem;
+    /* box-shadow: 0px -3px 0px #bfc7c8; */
+    user-select: none;
+    font-size: 0.75rem;
+    z-index: 9999999;
+    backdrop-filter: blur(5px);
+}
+
+.wrapper_plastic .taskbar .button {
+    font-weight: bold;
+}
+
+.wrapper_plastic .startmenu {
+    background: rgba(163, 176, 178, 0.642);
+
+    backdrop-filter: blur(6px);
+    width: 14rem;
+    border: 3px;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    border-style: solid;
+    /* border-image: conic-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.7)) 1; */
+
+    border-radius: 5px 5px 0px 0px;
+
+    position: fixed;
+    bottom: 3rem;
+    /* padding: 0.5em; */
+    padding-left: 1.5rem;
+    transform: translateY(0);
+    transition: transform 400ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    z-index: 999999;
+
+    box-shadow: 0px 0px 60px 0px #ffffff91 inset;
+}
+
+.wrapper_plastic .startmenu.hidden {
+    transform: translateY(140%);
+    /* display: none; */
+}
+
+.wrapper_plastic .startmenu .stripe {
+    width: 1.5rem;
+}
+
+.wrapper_plastic .startmenu .stripe b {
+    font-family: "Arial Black";
+}
+.wrapper_plastic .startmenu .stripe span {
+    font-family: "Arial";
+    font-weight: 100;
+}
+
+.wrapper_plastic .startmenu .menuitem {
+    /* position: relative; */
+    transition: margin-left 0.2s, background-color 0.5s;
+    margin-left: 0;
+
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    background-color: #ffffff00;
+    border-radius: 5rem 0 0 5rem;
+    cursor: pointer;
+}
+
+.wrapper_plastic .startmenu .menuitem:hover {
+
+    margin-left: 0.5rem;
+
+    background-color: #ffffffa9;
+    cursor: pointer;
+    /* transition: background-color 0s; */
+    /* color: white; */
+    cursor: pointer;
+}
+
+.wrapper_plastic .startmenu .menuitem .icon {
+    image-rendering: pixelated;
+    height: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.wrapper_plastic .startmenu .divider {
+    /* background-color: red; */
+    display: block;
+    height: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: calc(100 - 2rem);
+    margin-left: 0.2rem;
+    margin-right: 1rem;
+    border-bottom: 1.5px solid rgba(255,255,255,0.4);
+}
+
+
+.wrapper_plastic .button {
+    border: 3px outset;
+    padding: 4px;
+}
+.wrapper_plastic .button:hover {
+    cursor: pointer;
+}
+.wrapper_plastic .button:active {
+    border: 3px inset;
+}
+.wrapper_plastic .overlay_startmenu {
+    pointer-events: none;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    left:20vw;
+    z-index: 9999999999999;
+    image-rendering: pixelated;
+    opacity: 0.4;
+    display: none;
+}
+.wrapper_plastic .overlay_window {
+    pointer-events: none;
+    position: fixed;
+    bottom:20vh;
+    left: 0;
+    left:40vw;
+    z-index: 9999999999999;
+    image-rendering: pixelated;
+    /* opacity: 0.4; */
+    display: none;
+}
+
+@keyframes windowFadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+@keyframes windowFadeOut {
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0; transform: scale(0.9);}
+
+}
+
+.wrapper_plastic .window_frame {
+    animation: windowFadeIn 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    position: fixed;
+    z-index: 9999;
+    width: 35rem;
+    height: 24.3rem;
+    /* bottom: 20vh; */
+    /* left: 20vw; */
+    background: #cad4d58e;
+    box-sizing: border-box;
+    border: 1.8px solid #ffffffb3;
+    border-radius: 8px 8px 4px 4px;
+    backdrop-filter: blur(4px);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 6px 14px 0px #0000004f;
+}
+
+.wrapper_plastic .window_frame.closing_animation {
+    animation: windowFadeOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.wrapper_plastic .window_frame .titlebar {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0px 2px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+.wrapper_plastic .window_frame .titlebar .title {
+    flex: 1;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 2px 6px #00000061;
+}
+
+.wrapper_plastic .window_frame .titlebar .window_frame_button {
+    margin-left: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 90%;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0);
+    border-radius: 99px;
+    transition: background-color 0.7s;
+    /* margin-top: 10%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper_plastic .window_frame .titlebar .window_frame_button:hover {
+    background-color: rgba(255,255,255,0.3);
+    transition: background-color 0.2s;
+}
+
+.wrapper_plastic .window_frame .titlebar .window_frame_button:active {
+    /* border: 1.5px inset #CCC; */
+    box-shadow: 3px 2px 5px #404d6369 inset;
+}
+.wrapper_plastic .window_frame .titlebar .window_frame_button:active img {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+.wrapper_plastic .window_frame .titlebar .window_frame_button img {
+    image-rendering: pixelated;
+    height: 70%;
+}
+.wrapper_plastic .window_frame .content {
+    background-color: white;
+    border: 2px inset #888;
+    margin-top: 2px;
+    flex: 1;
+    padding: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper_plastic .window_frame.maizebus .content {
+    font-family: sans-serif;
+}
+
+.wrapper_plastic .window_frame.maizebus .content img.header {
+    image-rendering: pixelated;
+}
+.wrapper_plastic .window_frame.maizebus .content img.screenshot {
+    max-width: 10rem;
+}
+
+.wrapper_plastic .window_frame.maizebus .content video.screenshot {
+    max-width: 10rem;
+}
+
+.wrapper_plastic .window_frame.pnrgateway .content img.header {
+    image-rendering: pixelated;
+}
+
+.wrapper_plastic #startButton {
+    display: inline-block;
+    padding-top: 0;
+    border: none;
+    box-sizing: border-box;
+    height: 2rem;
+    line-height: 2rem;
+    box-shadow: inset 0px 0px 5px white;
+    border-radius: 9999px;
+    border: 1px solid white;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding-left: 1rem;
+    padding-right: calc(1rem - 0.5em);
+    font-size: 1.3rem;
+    text-align: center;
+    color: white;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.wrapper_plastic #startButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,381 @@
+html, body {
+    font-family: sans-serif;
+}
+
+.overlay_update {
+    position: fixed;
+    background: url(assets/misc/checkerboard_bg.png);
+    backdrop-filter: grayscale(1);
+    image-rendering: pixelated;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.overlay_update .overlay_update_inside {
+    border: 3px outset #CCC;
+    width: fit-content;
+    background-color: #c0c7c8;
+    font-size: 0.8rem;
+    display: none;
+}
+.overlay_update .overlay_update_inside p {
+    margin: 0.5rem;
+}
+
+.overlay_update img {
+    image-rendering: pixelated;
+}
+
+.overlay_update progress {
+    width: calc(100% - 1rem);
+    margin-left: 0.5rem;
+    border: 3px inset #CCC;
+    margin-bottom: 0.5rem;
+    height: 1rem;
+}
+
+.overlay_update progress::-webkit-progress-bar {
+    background: white;
+}
+
+progress::-webkit-progress-value {
+  background-color: #0000a8;
+}
+
+
+.overlay_update .overlay_update_inside_bsod {
+    display: none;
+    color: white;
+    font-family: "Segoe UI", "Inter", Arial, sans-serif;
+    width: 50vw;
+    margin-right: 20vw;
+}
+
+.overlay_update .overlay_update_inside_bsod h3 {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+
+
+/* 98-specific styles */
+
+html,
+
+.wrapper_98 {
+    background-image: url("assets/98background.jpg");
+    background-size: cover;
+    background-position: top;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+}
+
+.wrapper_98::before {
+    content: ".";
+    color: transparent;
+    display: block;
+    position: fixed;
+    top: calc(50vh - 10rem);
+    background-image: url("assets/biglogo.png");
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 20rem;
+    background-size: contain;
+}
+
+.wrapper_98 .taskbar {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background: #c0c7c8;
+    padding: 0.5em 0.2em;
+    border-top: 2px solid #fff;
+    /* box-shadow: 0px -3px 0px #bfc7c8; */
+    user-select: none;
+    font-size: 0.75rem;
+    z-index: 9999999;
+}
+
+.wrapper_98 .taskbar .button {
+    font-weight: bold;
+}
+
+.wrapper_98 .startmenu {
+    background: #c0c7c8;
+    width: 9.4rem;
+    border: 3px outset;
+    position: fixed;
+    bottom: 1.7rem;
+    /* padding: 0.5em; */
+    padding-left: 1.5rem;
+    transform: translateY(0);
+    transition: transform 200ms;
+    transition-timing-function: linear;
+    z-index: 999999;
+}
+
+.wrapper_98 .startmenu.hidden {
+    transform: translateY(100%);
+    /* display: none; */
+}
+
+.wrapper_98 .startmenu .stripe {
+    content: "Altavision";
+    font-family: Helvetica;
+    color: white;
+    background: #0000a7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    font-size: 1.2rem;
+    height: 100%;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    background-image: url(assets/start_menu_highlight.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.wrapper_98 .startmenu .stripe b {
+    font-family: "Arial Black";
+}
+.wrapper_98 .startmenu .stripe span {
+    font-family: "Arial";
+    font-weight: 100;
+}
+
+.wrapper_98 .startmenu .menuitem {
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 0.8rem;
+}
+
+.wrapper_98 .startmenu .menuitem:hover {
+    background: #0000a7;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper_98 .startmenu .menuitem .icon {
+    image-rendering: pixelated;
+    height: 1.5rem;
+    margin-right: 0.8rem;
+}
+
+.wrapper_98 .startmenu .divider {
+    /* background-color: red; */
+    display: block;
+    height: 0.25rem;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    border-bottom: 1.5px solid #87888f;
+    box-shadow: 0px 1.5px 0px #fff;
+}
+
+
+.wrapper_98 .button, .overlay_update .button {
+    border: 3px outset;
+    padding: 4px;
+    user-select: none;
+}
+.wrapper_98 .button:hover, .overlay_update .button {
+    cursor: pointer;
+}
+.wrapper_98 .button:active, .overlay_update .button {
+    border: 3px inset;
+}
+.wrapper_98 .overlay_startmenu {
+    pointer-events: none;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    left:20vw;
+    z-index: 9999999999999;
+    image-rendering: pixelated;
+    opacity: 0.4;
+    display: none;
+}
+.wrapper_98 .overlay_window {
+    pointer-events: none;
+    position: fixed;
+    bottom:20vh;
+    left: 0;
+    left:40vw;
+    z-index: 9999999999999;
+    image-rendering: pixelated;
+    /* opacity: 0.4; */
+    display: none;
+}
+
+.wrapper_98 .window_frame {
+    position: fixed;
+    z-index: 9999;
+    width: 35rem;
+    height: 24.3rem;
+    /* bottom: 20vh; */
+    /* left: 20vw; */
+    background: #c0c7c8;
+    box-sizing: border-box;
+    border: 1.8px outset;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper_98 .window_frame .titlebar {
+    background-color: #0000a8;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    height: 1.1rem;
+    line-height: 1.2rem;
+    padding: 0px 2px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+.wrapper_98 .window_frame .titlebar .title {
+    flex: 1;
+}
+
+.wrapper_98 .window_frame .titlebar .window_frame_button {
+    width: 1rem;
+    background-color: red;
+    margin-left: 2px;
+    height: 75%;
+    background-color: #c0c7c8;
+    border: 1.5px outset #CCC;
+    box-sizing: border-box;
+    /* margin-top: 10%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper_98 .window_frame .titlebar .window_frame_button:active {
+    border: 1.5px inset #CCC;
+}
+.wrapper_98 .window_frame .titlebar .window_frame_button:active img {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+.wrapper_98 .window_frame .titlebar .window_frame_button img {
+    image-rendering: pixelated;
+    height: 70%;
+}
+.wrapper_98 .window_frame .content {
+    background-color: white;
+    border: 2px inset #888;
+    margin-top: 2px;
+    flex: 1;
+    padding: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper_98 .window_frame.maizebus .content {
+    font-family: serif;
+}
+
+.wrapper_98 .window_frame.maizebus .content img.header {
+    image-rendering: pixelated;
+}
+.wrapper_98 .window_frame.maizebus .content img.screenshot {
+    max-width: 10rem;
+}
+
+.wrapper_98 .window_frame.maizebus .content video.screenshot {
+    max-width: 10rem;
+}
+
+.wrapper_98 .window_frame.pnrgateway .content {
+    font-family: serif;
+}
+
+.wrapper_98 .window_frame.pnrgateway .content img.header {
+    image-rendering: pixelated;
+}
+
+.wrapper_98 .window_frame.pnrgateway .content img.bodyimg {
+    max-width: 29rem;
+}
+
+.wrapper_98 .window_frame.update .content {
+    font-family: sans-serif;
+    background: #c0c7c8;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.wrapper_98 .window_frame.update .content .subcontent {
+    padding: 0.2rem 0.5rem;
+}
+.wrapper_98 .window_frame.update .content .subcontent h2 {
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+.wrapper_98 .window_frame.update .content .subcontent .buttons {
+    background: red;
+    text-align: center;
+}
+.wrapper_98 .window_frame.update .content .subcontent .buttons .button {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8em; /* TODO: Get these buttons pixel-perfect! */
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+
+    html, body {
+        font-size: 2em;
+    }
+    .window_frame .content {
+        font-size: 0.5rem;
+    }
+    .overlay_update_inside_bsod {
+        font-size: 0.5rem;
+    }
+}
+
+.skipbutton {
+    display: block;
+    background: #CCC;
+    margin-bottom: 0.5rem;
+    border: 2px outset;
+    background: #CCC;
+    font-size: 1em;
+    display: block;
+    border: 2px outset;
+    margin: 0 1em 1em 1em;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.aboutme .me-portrait {
+    width: 150px;
+    image-rendering: pixelated;
+    display: inline-block;
+}
